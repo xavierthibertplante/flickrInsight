@@ -96,11 +96,13 @@ def index():
       )
 
 @app.route('/input')
-def cesareans_input():
+#def cesareans_input():
+def flickr_project_input():
    return render_template("input.html")
 
 @app.route('/output')
-def cesareans_output():
+#def cesareans_output():
+def flickr_project_output():
    list_dest=[]
  #pull 'birth_month' from input field and store it
    for idx in range(1,6):
@@ -127,6 +129,6 @@ def cesareans_output():
 #     births.append(dict(index=query_results.iloc[i]['index'], attendant=query_results.iloc[i]['attendant'], birth_month=query_results.iloc[i]['birth_month']))
 #     the_result = ModelIt(patient,births)
 # return render_template("output.html", births = births, the_result = the_result)
-   return render_template("output.html",dest_1 = ", ".join(dest_pretty), sugg = ", ".join(sugg))
-#   return render_template("output.html",dest_1 = ", ".join(dest_pretty), sugg = linked_sugg )
+#   return render_template("output.html",dest_1 = ", ".join(dest_pretty), sugg = ", ".join(sugg))
+   return render_template("output.html",dest_1 = ", ".join(dest_pretty), sugg = linked_sugg )
 
