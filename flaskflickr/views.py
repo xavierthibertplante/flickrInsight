@@ -6,9 +6,9 @@ from flask import request
 from flaskflickr.a_Model import dest2vec_recommendation
 
 import sys
-sys.path.append('/home/xavier/DIR.insight2018/')
-from secret import API_KEY, API_SECRET
-import flickrapi
+# sys.path.append('/home/xavier/DIR.insight2018/')
+# from secret import API_KEY, API_SECRET
+# import flickrapi
 import time
 import datetime
 from calendar import monthrange
@@ -91,9 +91,10 @@ def dest2vec_recommendation(dest_1):
 @app.route('/')
 @app.route('/index')
 def index():
-   return render_template("index.html",
-      title = 'Home', user = { 'nickname': 'Miguel' },
-      )
+   return render_template("input.html")
+#   return render_template("index.html",
+#      title = 'Home', user = { 'nickname': 'Miguel' },
+#      )
 
 @app.route('/input')
 #def cesareans_input():
